@@ -39,7 +39,7 @@ export const getSingleGifSuccess = (gif) => {
 export const getGifs = (data) => {
     return (dispatch) => {
         dispatch(loading())
-        axios.get(`https://api.giphy.com/v1/gifs/search?api_key=deokzgUjxm6QHQdp3H3aca1LSZcCpucc&q=${data}&limit=25&offset=0&rating=Y&lang=en`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?api_key=deokzgUjxm6QHQdp3H3aca1LSZcCpucc&q=${data}&limit=200&offset=offset&rating=Y&lang=en`)
         .then(res => {
             dispatch(getGifsSuccess(res.data))
         })

@@ -10,8 +10,9 @@
     justify-content: center;
 }
 .search-box{
+    /* display: flex; */
     border: 1px solid black;
-    width: 300px;
+    /* width: 300px; */
     border-radius: 5px;
 }
 button{
@@ -65,3 +66,14 @@ text-align: center;
 }
 .navbar a:hover{
 text-decoration: none;}
+.pagination{
+    text-align: center;
+    justify-content: center;
+}
+@media screen and (max-width:500px){
+    .search-box{
+        /* display: flex; */
+        /* border: 1px solid black;
+        border-radius: 5px; */
+    }
+}
