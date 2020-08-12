@@ -3,8 +3,11 @@ import { getGifs } from "../../store/actions/gif";
 import Gifcard from "./gifCards";
 import { Spinner } from "reactstrap";
 import Pagination from "react-js-pagination";
+import 'animate.css';
+
 import { useDispatch, useSelector } from "react-redux";
 const Home = () => {
+    let [hide, setH] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [gifsPerPage, setGifsPerPage] = useState(30);
     const [numPage] = useState(gifsPerPage);
@@ -13,6 +16,7 @@ const Home = () => {
 
     function submit() {
         dispatch(getGifs((searchItem)))
+        setH(hide = true)
     }
 
     const gifs = useSelector(state => state.gif.gifs);
@@ -37,6 +41,8 @@ const Home = () => {
                     <button onClick={submit}>Search</button>
                 </div>
             </div>
+           {hide ? 
+           <>
             {!isLoading ? (
                 <>
                     {gifs.data === undefined && gifs.pagination === undefined ? "" : 
@@ -65,6 +71,12 @@ const Home = () => {
             </>
             )}
             </>) : <div className="spinner"><Spinner /></div>}
+            </>
+            : (<><div  className="animate__animated animate__heartBeat animate__infinite">
+                <h1 >GIPHY</h1>
+                <p>Home of Gifs</p>
+                </div></>)
+        }
 
         </div>
     )

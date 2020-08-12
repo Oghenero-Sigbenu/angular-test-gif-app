@@ -1,6 +1,7 @@
+
 .navbar{
     width: 100%;
-    background: black;
+    background: white;
     color: white;
 }
 .search{
@@ -11,9 +12,10 @@
 }
 .search-box{
     /* display: flex; */
-    border: 1px solid black;
+    border: 1px solid white;
     /* width: 300px; */
     border-radius: 5px;
+    background: white;
 }
 button{
     background: black;
@@ -23,11 +25,13 @@ button{
 }
 input{
     border: none;
+    outline: none;
 }
 .spinner{
     display: flex;
     justify-content: center;
     text-align: center;
+    color: white;
 }
 .card-box{
     width: 90%;
@@ -41,6 +45,7 @@ input{
     height: 200px;
     margin: 20px;
     border: none;
+    color: white;
     object-fit: contain;
 }
 .card:hover{
@@ -52,6 +57,8 @@ text-align: center;
 .detail{
     display: flex;
     justify-content: center;
+    color: white !important;
+
 }
 .card img{
     width: 100%;
@@ -60,16 +67,34 @@ text-align: center;
 .detail .card{
     width: 400px;
     height: 400px;
+    color: white !important;
+
 }
 .navbar a{
+    color: black !important;
+}
+.card-box a, .pagination a{
     color: white !important;
 }
-.navbar a:hover{
+.navbar a:hover, .card-box a:hover{
 text-decoration: none;}
 .pagination{
     text-align: center;
     justify-content: center;
+    background: black !important;
 }
+.page-link{
+    background:black !important;
+}
+ 
+  .animate__animated.animate__heartBeat {
+    --animate-duration: 2s;
+    text-align: center;
+    color: white;
+  }
+
+ 
+  
 @media screen and (max-width:500px){
     .search-box{
         /* display: flex; */
